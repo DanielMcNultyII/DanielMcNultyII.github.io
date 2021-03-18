@@ -2,40 +2,83 @@
 <html>
 
 <!-- Tab Title -->
-<title>Daniel McNulty II</title>
+<title>Daniel McNulty II - About Me</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
 
 <!-- Eliminate large spaces between headings and subheadings-->
 <!-- Set background image -->
 <!-- Set collapsible style -->
 <style>
-html,body,h1,h2,h3,h4,h5,h6,h7 {font-family: "Roboto", sans-serif}
-h4{
-  margin-bottom: 0;
-}
-h5{
-  margin-top:0;
-}
-h6{
-  margin-bottom:0;
-}
-a{
-  text-decoration:none;
-}
-body {
-  background-image: url('https://www.publicdomainpictures.net/pictures/170000/velka/columbia-university-1463234723yIF.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
+  html,h1,h2,h3,h4,h5,h6,h7 {font-family: "Lato", sans-serif}
+  h2{
+    display: inline-block;
+  }
+  h4{
+    margin-bottom: 0;
+  }
+  h5{
+    margin-top:0;
+  }
+  h6{
+    margin-bottom:0;
+  }
+  body {
+    font-family: "Open Sans", sans-serif
+  }
+  a{
+    text-decoration: none;
+  }
+  .active, .collapsible {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    color: white;
+    float: right;
+    width: 30px;
+    padding: 20px;
+  }
+  .collapsible:hover {
+    background-color: #555;
+  }
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  .content {
+    padding: 0 18px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: white;
+  }
 </style>
 
+<body class="w3-2019-vanilla-custard">
+  
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="index.html" class="w3-bar-item w3-button w3-left"><i class="fa fa-home"></i> Home</a>
+  <a href="about_me.html" class="w3-bar-item w3-button w3-left"><i class="fa fa-user"></i> About Me</a>
+  <a href="articles.html" class="w3-bar-item w3-button w3-left"><i class="fa fa-newspaper-o"></i> Articles</a>
+  <a href="https://www.linkedin.com/in/danieljmcnultyii/" class="w3-bar-item w3-button w3-right" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://github.com/DanielMcNultyII" class="w3-bar-item w3-button w3-right" target="_blank"><i class="fa fa-github"></i></a>
+</div>
+
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1600px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -44,46 +87,51 @@ body {
     <div class="w3-third">
     
       <!-- Profile Photo -->
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="http://www.columbia.edu/~djm2236/pictures/Profile_Pic.png" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-          </div>
+      <div class="w3-white w3-text-grey w3-container" style="padding:0px;">
+        <div class="w3-display" style="margin:0px;">
+          <img src="pictures/Profile_Pic.png" style="width:100%" alt="Profile Picture">
         </div>
         
         <!-- Name and Personal Info -->
-        <div class="w3-container w3-card w3-white">
-          <h2><b>Daniel J. McNulty II</b></h2>
-          <p><i class="fa fa-black-tie fa-fw w3-margin-right w3-large w3-text-blue"></i>Financial Modeling and Valuation Associate</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>New York, NY</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>DanielJMcNultyII@gmail.com</p>
-          <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="https://www.linkedin.com/in/danieljmcnultyii/" target="_blank">linkedin.com/in/danieljmcnultyii</a></p>
-          <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="https://github.com/DanielMcNultyII" target="_blank">github.com/DanielMcNultyII</a></p>
+        <div class="w3-container w3-white">
+          <h1><b>Daniel J. McNulty II</b></h1>
+          <p><i class="fa fa-black-tie fa-fw w3-margin-right w3-large w3-text-black"></i>Financial Modeling and Valuation Associate</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-black"></i>New York, NY</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i>DanielJMcNultyII@gmail.com</p>
+          <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://www.linkedin.com/in/danieljmcnultyii/" target="_blank">linkedin.com/in/danieljmcnultyii</a></p>
+          <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://github.com/DanielMcNultyII" target="_blank">github.com/DanielMcNultyII</a></p>
         </div>
         
         <!-- Certifications -->
-        <div class="w3-container w3-card w3-white">
-          <h4 class="w3-text-grey"><i class="fa fa-certificate fa-fw w3-margin-right w3-text-blue"></i>Certifications</h4>
-          <h6 class="w3-text-grey"> <i>Practical Python with Applications in Finance</i></h6>
+        <div class="w3-container w3-black" style="padding-bottom:10px;">
+          <h4 class="w3-text-white"><i class="fa fa-certificate fa-fw w3-margin-right w3-text-white"></i>Certifications</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <h6 class="w3-text-black"> <i>Practical Python with Applications in Finance</i></h6>
           <h7 class="w3-opacity">ScriptUni | 
-          <span class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> Aug 2018</span></h7>
-          <h6 class="w3-text-grey"> <i>C++ Programming for Financial Engineering</i> </h6>
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>Aug 2018</span></h7>
+          <h6 class="w3-text-black"> <i>C++ Programming for Financial Engineering</i> </h6>
           <h7 class="w3-opacity">QuantNet | 
-          <span class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> Jun 2018</span></h7>
-          <h6 class="w3-text-grey"> <i>SQL for Finance</i> <br> </h6>
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>Jun 2018</span></h7>
+          <h6 class="w3-text-black"> <i>SQL for Finance</i> <br> </h6>
           <h7 class="w3-opacity">ScriptUni | 
-          <span class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> Sep 2019</span></h7>
-          <h6 class="w3-text-grey"> <i>Bloomberg Market Concepts</i></h6>
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>Sep 2019</span></h7>
+          <h6 class="w3-text-black"> <i>Bloomberg Market Concepts</i></h6>
           <h7 class="w3-opacity">Bloomberg | 
-          <span class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> Dec 2018</span></h7>
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>Dec 2018</span></h7>
+          <h6 class="w3-text-black"> <i>MITx Healthcare Finance</i></h6>
+          <h7 class="w3-opacity">MITx | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>Apr 2019</span></h7>
           <br><br>
         </div>
         
         <!-- Organizations -->
-        <div class="w3-container w3-card w3-white">
-          <h4 class="w3-text-grey"><i class="fa fa-group fa-fw w3-margin-right w3-text-blue"></i>Organizations</h4>
-          <h6 class="w3-text-grey"> <i>International Association of Quantitative Finance</i></h6>
-          <h7 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> Aug 2018</h7>
+        <div class="w3-container w3-black" style="padding-bottom:10px;">
+          <h4 class="w3-text-white"><i class="fa fa-group fa-fw w3-margin-right w3-text-white"></i>Organizations</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <h6 class="w3-text-black"> <i>International Association of Quantitative Finance</i></h6>
+          <h7 class="w3-text-black w3-opacity"><i class="fa fa-calendar fa-fw w3-text-black"></i>Aug 2018</h7>
           <br /><br />
         </div>
         
@@ -95,136 +143,145 @@ body {
     <!-- Right Column -->
     <div class="w3-twothird">
     
-    <!-- Education -->
-    <div class="w3-container w3-card w3-white">
-    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-mortar-board fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Columbia University Graduate School of Arts and Sciences</b></h4>
-      <h5 class="w3-opacity">Master of Arts - MA, Mathematics of Finance | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-text-blue"></i> 2018 - 2020</span> | 
-      <a href="https://www.parchment.com/u/award/bef6d9d44b4fb2280180a6e083626c49" target="_blank"> 
-      <span class="w3-text-blue"><i class="fa fa-external-link fa-fw w3-text-blue"></i> Link to Diploma</span></a></h5>
-      <p>Activities: The Columbia Quant Group and the Columbia Statistics Club <br /> <br />
-      Coursework:</p>
-      <ul>
-        <li>Stochastic Processes - Applications I</li>
-        <li>Stochastic Methods in Finance</li>
-        <li>Statistical Inference/Time-Series Modeling</li>
-        <li>Statistical Methods in Finance</li>
-        <li>Numerical Methods in Finance</li>
-        <li>Quantitative Methods in Investment Management</li>
-        <li>Computational Methods in Finance (Columbia Master of Science in Financial Engineering course)</li>
-        <li>Mathematical Methods in Financial Price Analysis</li>
-        <li>PhD Introduction to Econometrics and Statistical Inference (Columbia Business School course)</li>
-        <li>Statistical Computing and Introduction to Data Science</li>
-        <li>Linear Regression Analysis</li>
-        <li>Introduction to the Mathematics of Finance</li>
-        <li>Mathematics of Finance Practitioners' Seminar</li>
-      </ul>
-      <hr>
-    </div>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>The Cooper Union for the Advancement of Science and Art</b></h4>
-      <h5 class="w3-opacity">Bachelor of Engineering - BE, Chemical Engineering | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> 2013 - 2017</span></h5>
-      <p>Activities: Cooper Union Finance and Investment Club <br /> <br />
-      Recieved a full tuition scholarship</p>
-      <br>
-    </div>
-    </div>
-    
-    <!-- Finance Experience -->
-    <div class="w3-container w3-card w3-white">
-    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Finance Experience</h2>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Risk Advisory Solutions Modeling & Valuation Associate</b></h4>
-      <h5 class="w3-opacity">KPMG US | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Jan 2020 - Present</span></h5>
-      <p></p>
-      <hr>
-    </div>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Advisory Risk Analytics Valuation Intern</b></h4>
-      <h5 class="w3-opacity">KPMG US | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Jun 2019 - Aug 2019</span></h5>
-      <ul>
-        <li>Performed valuations, including bilateral credit valuation adjustment calculations, of portfolios with over 200 interest rate and cross-currency swaps, cap and floor options, and commodity futures using Bloomberg</li>
-        <li>Analyzed bond and credit data from Bloomberg for over 200 companies utilizing Excel and R to construct pivot tables and box plots summarizing team findings</li>
-        <li>Assisted in the hedge effectiveness testing of interest rate swaps</li>
-      </ul>
-      <hr>
-    </div>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Information Technology Summer Analyst</b></h4>
-      <h5 class="w3-opacity">Credit Suisse | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Jun 2016 - Aug 2016</span></h5>
-      <ul>
-        <li>Optimized and automated tracking of 8,000 technical infrastructure assets in Excel using VBA for future allocated cost savings</li>
-        <li>Produced two instructional videos, a promotional video, and a social media marketing plan with my team to promote mobile applications within the firm</li>
-        <li>Presented projects to groups of up to 80 people, including 10 department heads</li>
-      </ul>
-      <br>
-    </div>
-    </div>
-    
-    <!-- Research Experience -->
-    <div class="w3-container w3-card w3-white">
-    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-area-chart fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Research Experience</h2>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Research Assistant</b></h4>
-      <h5 class="w3-opacity">Columbia Department of Economics | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Feb 2019 - May 2019</span></h5>
-      <p>Assisted in doctoral student Ye Zhang's <i>Startup Financing, Venture Capital and Bank Lending</i> research project by</p>
-      <ul>
-        <li>Generating 60 interactive global and 60 interactive US chloropeth map layers displaying venture capital investment data spanning from 2000 to 2019 using R</li>
-        <li>Compiling, sorting, and verifying the accuracy of venture capital financier data within the project database</li>
-        <li>Locating and correcting erroneous venture capital financier data within the project database</li>
-      </ul>
-    </div>
-    </div>
-
-    <!-- Programming Projects -->
-    <div class="w3-container w3-card w3-white">
-    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-laptop fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Programming Projects</h2>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Asset-Backed Security Modeling Case Study</b></h4>
-      <h5 class="w3-opacity">ScriptUni | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Aug 2018</span></h5>
-      <p>Part of the Practical Python for Financial Applications Certification</p>
-      <ul>
-        <li>Implemented structured security and tranche Python classes with waterfall mechanisms that tracked every cash flow within the asset-backed security</li>
-        <li>Developed functions to determine the IRR, DIRR, average life, and rating of each tranche</li>
-        <li>Created a Monte Carlo simulation to simulate different credit default scenarios</li>
-      </ul>
-      <hr>
-    </div>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Option Modeling and Pricing Project</b></h4>
-      <h5 class="w3-opacity">QuantNet | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> May 2018 - Jun 2018</span></h5>
-      <p>Part of the C++ for Financial Applications Certification</p>
-      <ul>
-        <li>Designed American and European option C++ classes that encapsulated Black-Scholes option pricing and option sensitivity calculation functionality</li>
-        <li>Analyzed Monte Carlo and Finite Difference methods utilized in pricing European options, including writing functions to compute the standard deviation and error of the Monte Carlo simulations</li>
-        <li>Refined C++ programs displaying Monte Carlo and Finite Difference output in Excel spreadsheets</li>
-      </ul>
-    </div>
-    </div>
-
-    <!-- Volunteer Experience -->
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-handshake-o fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Volunteer Experience</h2>
-    <div class="w3-container">
-      <h4 class="w3-opacity"><b>Group Leader</b></h4>
-      <h5 class="w3-opacity">Project HAPPY | 
-      <span class="w3-text-blue"><i class="fa fa-calendar fa-fw"></i> Sep 2009 - Present</span></h5>
-      <ul>
-        <li>Train and motivate group counselors on how to interact with participants with various disabilities</li>
-        <li>Provide special needs participants with sports and recreational activities on a weekly basis</li>
-        <li>Cultivate social skills and self-esteem in children often marginalized due to mental impairments</li>
-      </ul>
-    </div>
-    </div>
+      <button class="collapsible" id="Education">
+        <h2 class="w3-text-white"><i class="fa fa-mortar-board fa-fw w3-margin-right w3-xxlarge w3-text-white"></i>Education</h2>
+      </button>
+      <div class="content">
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Columbia University Graduate School of Arts and Sciences</b></h4>
+          <h5 class="w3-opacity">Master of Arts - MA, Mathematics of Finance | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw w3-text-black"></i>2018 - 2020</span> | 
+          <a href="https://www.parchment.com/u/award/bef6d9d44b4fb2280180a6e083626c49" target="_blank"> 
+          <span class="w3-text-black"><i class="fa fa-external-link fa-fw w3-text-black"></i>Link to Diploma</span></a></h5>
+          <p class="w3-opacity">Activities: The Columbia Quant Group and the Columbia Statistics Club <br /> <br />
+          Coursework:</p>
+          <ul class="w3-opacity">
+            <li>Stochastic Processes - Applications I</li>
+            <li>Stochastic Methods in Finance</li>
+            <li>Statistical Inference/Time-Series Modeling</li>
+            <li>Statistical Methods in Finance</li>
+            <li>Numerical Methods in Finance</li>
+            <li>Quantitative Methods in Investment Management</li>
+            <li>Computational Methods in Finance (Columbia Master of Science in Financial Engineering course)</li>
+            <li>Mathematical Methods in Financial Price Analysis</li>
+            <li>PhD Introduction to Econometrics and Statistical Inference (Columbia Business School course)</li>
+            <li>Statistical Computing and Introduction to Data Science</li>
+            <li>Linear Regression Analysis</li>
+            <li>Introduction to the Mathematics of Finance</li>
+            <li>Mathematics of Finance Practitioners' Seminar</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>The Cooper Union for the Advancement of Science and Art</b></h4>
+          <h5 class="w3-opacity">Bachelor of Engineering - BE, Chemical Engineering | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>2013 - 2017</span></h5>
+          <p class="w3-opacity">Activities: Cooper Union Finance and Investment Club <br /> <br />
+            Recieved a full tuition scholarship</p>
+          <br>
+        </div>
+      </div>
+      
+      <button class="collapsible">
+        <h2 class="w3-text-white"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-white"></i>Finance Experience</h2>
+      </button>
+      <div class="content">
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Risk Advisory Solutions Modeling & Valuation Associate</b></h4>
+          <h5 class="w3-opacity">KPMG US | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Jan 2020 - Present</span></h5>
+          <ul class=w3-opacity>
+            <li>Appraise and calculate bilateral credit valuation adjustments for portfolios of over 800 positions containing derivatives and securities, including interest rate/cross currency/credit default swaps, interest rate caps/floors, foreign exchange/equity/TBA/credit default swap options, foreign exchange/commodity forwards, warrants, term/delayed draw/revolver loans, corporate/municipal bonds, collateralized mortgage obligations, and various asset backed securities using Bloomberg and INTEXcalc</li>
+            <li>Conduct hedge effectiveness tests on interest rate swaps meant to protect against inopportune and unforeseen interest rate changes</li>
+            <li>Perform quality control tests on firm valuation tools and facilitated the implementation of a new valuation tool</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Advisory Risk Analytics Valuation Intern</b></h4>
+          <h5 class="w3-opacity">KPMG US | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Jun 2019 - Aug 2019</span></h5>
+          <ul class=w3-opacity>
+            <li>Calculated valuations, including bilateral credit valuation adjustments, of portfolios with over 200 interest rate and cross-currency swaps, cap and floor options, and commodity futures using Bloomberg</li>
+            <li>Analyzed bond and credit data from Bloomberg for over 200 companies utilizing Excel and R to construct pivot tables and box plots summarizing team findings</li>
+            <li>Assisted in the hedge effectiveness testing of interest rate swaps</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Information Technology Summer Analyst</b></h4>
+          <h5 class="w3-opacity">Credit Suisse | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Jun 2016 - Aug 2016</span></h5>
+          <ul class="w3-opacity">
+            <li>Optimized and automated tracking of 8,000 technical infrastructure assets in Excel using VBA for future allocated cost savings</li>
+            <li>Collaborated with a team of interns to produce 2 instructional videos, a promotional video, and a social media marketing plan to promote mobile applications within the firm</li>
+            <li>Presented projects to groups of up to 80 people, including 10 department heads</li>
+          </ul>
+          <br>
+        </div>
+      </div>
+      
+      <button class="collapsible">
+        <h2 class="w3-text-white"><i class="fa fa-area-chart fa-fw w3-margin-right w3-xxlarge w3-text-white"></i>Research Experience</h2>
+      </button>
+      <div class="content">
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Research Assistant</b></h4>
+          <h5 class="w3-opacity">Columbia Department of Economics | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Feb 2019 - May 2019</span></h5>
+          <p class="w3-opacity">Assisted in doctoral student Ye Zhang's <i>Startup Financing, Venture Capital and Bank Lending</i> research project by</p>
+          <ul class="w3-opacity">
+            <li>Generating 60 interactive global and 60 interactive US chloropeth map layers displaying venture capital investment data spanning from 2000 to 2019 using R</li>
+            <li>Compiling, sorting, and verifying the accuracy of venture capital financier data within the project database</li>
+            <li>Locating and correcting erroneous venture capital financier data within the project database</li>
+          </ul>
+        </div>
+      </div>
+      
+      <button class="collapsible">
+        <h2 class="w3-text-white"><i class="fa fa-laptop fa-fw w3-margin-right w3-xxlarge w3-text-white"></i>Programming Projects</h2>
+      </button>
+      <div class="content">
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Asset-Backed Security Modeling Case Study</b></h4>
+          <h5 class="w3-opacity">ScriptUni | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Aug 2018</span></h5>
+          <p class="w3-opacity">Part of the Practical Python for Financial Applications Certification</p>
+          <ul class="w3-opacity">
+            <li>Implemented structured security and tranche Python classes with waterfall mechanisms that tracked every cash flow within the asset-backed security</li>
+            <li>Developed functions to determine the IRR, DIRR, average life, and rating of each tranche</li>
+            <li>Created a Monte Carlo simulation to simulate different credit default scenarios</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Option Modeling and Pricing Project</b></h4>
+          <h5 class="w3-opacity">QuantNet | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>May 2018 - Jun 2018</span></h5>
+          <p class="w3-opacity">Part of the C++ for Financial Applications Certification</p>
+          <ul class="w3-opacity">
+            <li>Designed American and European option C++ classes that encapsulated Black-Scholes option pricing and option sensitivity calculation functionality</li>
+            <li>Analyzed Monte Carlo and Finite Difference methods utilized in pricing European options, including writing functions to compute the standard deviation and error of the Monte Carlo simulations</li>
+            <li>Refined C++ programs displaying Monte Carlo and Finite Difference output in Excel spreadsheets</li>
+          </ul>
+        </div>
+      </div>
+      
+      <button class="collapsible">
+        <h2 class="w3-text-white"><i class="fa fa-handshake-o fa-fw w3-margin-right w3-xxlarge w3-text-white"></i>Volunteer Experience</h2>
+      </button>
+      <div class="content">
+        <div class="w3-container">
+          <h4 class="w3-text-black"><b>Group Leader</b></h4>
+          <h5 class="w3-opacity">Project HAPPY | 
+          <span class="w3-text-black"><i class="fa fa-calendar fa-fw"></i>Sep 2009 - Present</span></h5>
+          <ul class="w3-opacity">
+            <li>Train and motivate group counselors on how to interact with participants with various disabilities</li>
+            <li>Provide special needs participants with sports and recreational activities on a weekly basis</li>
+            <li>Cultivate social skills and self-esteem in children often marginalized due to mental impairments</li>
+          </ul>
+        </div>
+      </div>
     
     <!-- End Right Column -->
     </div>
@@ -236,15 +293,36 @@ body {
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-blue w3-center w3-margin-top">
+<footer class="w3-container w3-dark-grey w3-center w3-margin-top">
   <p>Connect with me on <br />
-  <a href="https://www.linkedin.com/in/danieljmcnultyii/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   <a href="https://github.com/DanielMcNultyII" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/in/danieljmcnultyii/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </p>
+  <a href="#" class="w3-button w3-black w3-padding w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Back to the top</a>
   <p>Webpage powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  <br />Background picture by <a href="https://www.publicdomainpictures.net/en/view-image.php?image=168073&amppicture=columbia-university" target="_blank">George Hodan</a>
   </p>
 </footer>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<script type="text/javascript">
+document.getElementById("Education").click();
+</script>
 
 </body>
 </html>
